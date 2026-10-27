@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>რეგისტრაცია | Step</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#2557e6">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="app-header" class="site-header"></header>
+
+  <main class="container section narrow">
+    <div class="auth-box">
+      <h1>რეგისტრაცია</h1>
+      <p id="login-note" class="notice" hidden></p>
+
+      <form id="register-form" class="form" novalidate>
+        <label class="field">სახელი
+          <input name="name" type="text" autocomplete="name" required>
+        </label>
+        <label class="field">ელფოსტა
+          <input name="email" type="email" autocomplete="email" required>
+        </label>
+        <label class="field">პაროლი (მინ. 6 სიმბოლო)
+          <input name="password" type="password" autocomplete="new-password" required>
+        </label>
+        <label class="field">გაიმეორეთ პაროლი
+          <input name="confirm" type="password" autocomplete="new-password" required>
+        </label>
+        <p class="form-error" role="alert"></p>
+        <button type="submit" class="btn">რეგისტრაცია</button>
+      </form>
+
+      <p class="auth-switch">უკვე გაქვთ ანგარიში? <a id="to-login" href="login.html">შესვლა</a></p>
+    </div>
+  </main>
+
+  <footer id="app-footer" class="site-footer"></footer>
+  <script type="module" src="js/register.js"></script>
+</body>
+</html>

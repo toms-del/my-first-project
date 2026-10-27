@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>გაყიდვა | Step</title>
+  <meta name="description" content="დაამატე შენი პროდუქტი გასაყიდად.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#2557e6">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="app-header" class="site-header"></header>
+
+  <main class="container section">
+    <div class="grid-2 top">
+      <section>
+        <h1 id="form-title">პროდუქტის დამატება</h1>
+        <form id="product-form" class="form" novalidate>
+          <label class="field">დასახელება
+            <input name="name" type="text" maxlength="80" placeholder="მაგ: Samsung Galaxy A54">
+            <small class="error" data-error="name"></small>
+          </label>
+
+          <div class="grid-2">
+            <label class="field">ბრენდი
+              <input name="brand" type="text" list="brands" maxlength="30" placeholder="მაგ: Samsung">
+              <datalist id="brands"></datalist>
+              <small class="error" data-error="brand"></small>
+            </label>
+            <label class="field">კატეგორია
+              <select name="category">
+                <option value="">აირჩიეთ...</option>
+                <option>სმარტფონი</option>
+                <option>ლეპტოპი</option>
+                <option>აუდიო</option>
+                <option>ტელევიზორი</option>
+                <option>აქსესუარი</option>
+                <option>გეიმინგი</option>
+                <option>ტაბლეტი</option>
+                <option>სმარტ საათი</option>
+                <option>კამერა</option>
+                <option>მონიტორი</option>
+                <option>ქსელი</option>
+                <option>მეხსიერება</option>
+                <option>დრონი</option>
+                <option>პრინტერი</option>
+                <option>სახლის ტექნიკა</option>
+              </select>
+              <small class="error" data-error="category"></small>
+            </label>
+          </div>
+
+          <div class="grid-3">
+            <label class="field">მდგომარეობა
+              <select name="condition">
+                <option value="">აირჩიეთ...</option>
+                <option>ახალი</option>
+                <option>მეორადი</option>
+              </select>
+              <small class="error" data-error="condition"></small>
+            </label>
+            <label class="field">ფასი (₾)
+              <input name="price" type="number" min="1" step="0.01" placeholder="0.00">
+              <small class="error" data-error="price"></small>
+            </label>
+            <label class="field">მარაგი (ცალი)
+              <input name="stock" type="number" min="0" step="1" value="1">
+              <small class="error" data-error="stock"></small>
+            </label>
+          </div>
+
+          <label class="field">აღწერა
+            <textarea name="description" rows="4" maxlength="600" placeholder="მახასიათებლები, მდგომარეობა, გარანტია..."></textarea>
+            <small class="error" data-error="description"></small>
+          </label>
+
+          <label class="field">სურათი (WEBP ან AVIF, მაქს. 2 MB)
+            <input id="image" type="file" accept="image/webp,image/avif">
+            <small class="error" data-error="image"></small>
+          </label>
+          <img id="preview" class="preview" alt="სურათის გადახედვა" hidden>
+
+          <label class="field">ვიდეო (YouTube ან Vimeo ბმული, არასავალდებულო)
+            <input name="video" type="url" placeholder="https://www.youtube.com/watch?v=...">
+            <small class="error" data-error="video"></small>
+          </label>
+
+          <div class="row gap">
+            <button type="submit" id="submit-btn" class="btn">დამატება</button>
+            <a href="sell.html" class="btn btn-outline">გაუქმება</a>
+          </div>
+        </form>
+      </section>
+
+      <section>
+        <h2>ჩემი პროდუქტები</h2>
+        <div id="my-list" class="my-list"><p class="muted">იტვირთება...</p></div>
+      </section>
+    </div>
+  </main>
+
+  <footer id="app-footer" class="site-footer"></footer>
+  <script type="module" src="js/sell.js"></script>
+</body>
+</html>

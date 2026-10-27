@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Step | ელექტრონიკის მაღაზია</title>
+  <meta name="description" content="სმარტფონები, ლეპტოპები, აუდიო და სხვა ელექტრონიკა ერთ ადგილას.">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#2557e6">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="app-header" class="site-header"></header>
+
+  <main>
+    <section class="hero">
+      <img src="img/hero.webp" alt="" class="hero-img" width="1600" height="700" fetchpriority="high">
+      <div class="container hero-content">
+        <h1>ელექტრონიკა, რომელიც გჭირდება</h1>
+        <p>იყიდე ახალი და მეორადი ტექნიკა ან გაყიდე შენი. დაამატე პროდუქტი რამდენიმე წუთში.</p>
+        <div class="row gap wrap">
+          <a href="products.html" class="btn">პროდუქტების ნახვა</a>
+          <a href="sell.html" class="btn btn-light">გაყიდვა</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="stats">
+        <div class="stat"><strong id="stat-products">0</strong><span>პროდუქტი</span></div>
+        <div class="stat"><strong id="stat-brands">0</strong><span>ბრენდი</span></div>
+        <div class="stat"><strong id="stat-categories">0</strong><span>კატეგორია</span></div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2>კატეგორიები</h2>
+      <div id="category-chips" class="chips"><span class="muted">იტვირთება...</span></div>
+    </section>
+
+    <section class="section container">
+      <div class="section-head">
+        <h2>ახალი დამატებული</h2>
+        <a href="products.html">ყველას ნახვა →</a>
+      </div>
+      <div id="featured" class="cards">
+        <div class="card skeleton"></div>
+        <div class="card skeleton"></div>
+        <div class="card skeleton"></div>
+        <div class="card skeleton"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="app-footer" class="site-footer"></footer>
+  <script type="module" src="js/index.js"></script>
+</body>
+</html>

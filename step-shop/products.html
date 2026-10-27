@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>პროდუქტები | Step</title>
+  <meta name="description" content="ელექტრონიკის კატალოგი ძებნით, ფილტრებითა და დალაგებით.">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#2557e6">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="app-header" class="site-header"></header>
+
+  <main class="container section">
+    <h1>პროდუქტები</h1>
+
+    <form class="filters" onsubmit="return false" aria-label="ფილტრები">
+      <label class="field wide">ძებნა
+        <input type="search" id="f-search" placeholder="მაგ: Samsung, ლეპტოპი, ყურსასმენი...">
+      </label>
+      <label class="field">კატეგორია
+        <select id="f-category"></select>
+      </label>
+      <label class="field">ბრენდი
+        <select id="f-brand"></select>
+      </label>
+      <label class="field">მდგომარეობა
+        <select id="f-condition">
+          <option value="">ყველა</option>
+          <option>ახალი</option>
+          <option>მეორადი</option>
+        </select>
+      </label>
+      <label class="field">მაქს. ფასი: <output id="f-price-out"></output>
+        <input type="range" id="f-price" min="0" max="5000" step="50" value="5000">
+      </label>
+      <label class="field">დალაგება
+        <select id="f-sort">
+          <option value="newest">უახლესი</option>
+          <option value="price-asc">ფასი: ზრდადი</option>
+          <option value="price-desc">ფასი: კლებადი</option>
+          <option value="name-asc">სახელი: A-Z</option>
+        </select>
+      </label>
+      <label class="check"><input type="checkbox" id="f-stock"> მხოლოდ მარაგში</label>
+      <label class="check"><input type="checkbox" id="f-fav"> მხოლოდ ფავორიტები ♥</label>
+      <button type="button" id="f-reset" class="btn btn-outline">გასუფთავება</button>
+    </form>
+
+    <p id="count" class="muted" aria-live="polite"></p>
+    <div id="grid" class="cards"></div>
+
+    <dialog id="detail" class="dialog"></dialog>
+  </main>
+
+  <footer id="app-footer" class="site-footer"></footer>
+  <script type="module" src="js/products.js"></script>
+</body>
+</html>

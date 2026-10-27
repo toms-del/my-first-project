@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ჩვენ შესახებ | Step</title>
+  <meta name="description" content="მაღაზიის შესახებ, ბრაუზერის ინფორმაცია და საკონტაქტო ფორმა.">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#2557e6">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="app-header" class="site-header"></header>
+
+  <main class="container section">
+    <h1>ჩვენ შესახებ</h1>
+    <p class="lead">Step არის ელექტრონიკის ონლაინ მაღაზია: აირჩიეთ ახალი ან მეორადი ტექნიკა, დაამატეთ კალათაში ან იყიდეთ პირდაპირ. შესულ მომხმარებელს საკუთარი პროდუქტის გაყიდვაც შეუძლია.</p>
+
+    <div class="grid-2 top">
+      <section class="panel">
+        <h2>ბრაუზერის ინფორმაცია</h2>
+        <p class="muted small">BOM ობიექტები: navigator, window, screen, location, history</p>
+        <dl id="bom-info" class="info"></dl>
+        <div class="row gap wrap">
+          <button id="btn-back" class="btn btn-small btn-outline">← უკან (history.back)</button>
+          <button id="btn-geo" class="btn btn-small">📍 ჩემი მდებარეობა</button>
+        </div>
+        <p id="geo-out" class="small" aria-live="polite"></p>
+        <hr>
+        <button id="btn-reset" class="btn btn-small btn-danger">პროდუქტების საწყისზე დაბრუნება</button>
+      </section>
+
+      <section class="panel">
+        <h2>დაგვიკავშირდით</h2>
+        <form id="contact-form" class="form" novalidate>
+          <label class="field">სახელი
+            <input name="name" type="text" required>
+          </label>
+          <label class="field">ელფოსტა
+            <input name="email" type="email" required>
+          </label>
+          <label class="field">შეტყობინება
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <button type="submit" class="btn">გაგზავნა</button>
+          <p id="contact-result" class="small" aria-live="polite"></p>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer id="app-footer" class="site-footer"></footer>
+  <script type="module" src="js/about.js"></script>
+</body>
+</html>
